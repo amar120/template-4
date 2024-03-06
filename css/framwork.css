@@ -1,0 +1,39 @@
+.m-b {
+  margin-bottom: 20px;
+}
+.b-r {
+  border-radius: 15px;
+}
+.p-d {
+  padding: 15px;
+}
+.c-s {
+  color: silver;
+}
+.m-t {
+  margin-top: 20px;
+}
+.c-orange {
+  color: orange;
+}
+.d-i-f {
+  display: inline-flex;
+}
+.m-r {
+  margin-right: 50px;
+}
+.b-t {
+  border-bottom: solid silver 1px;
+}
+.w-100 {
+  width: 100%;
+}
+.d-f {
+  display: flex;
+}
+.j-c {
+  justify-content: space-between;
+}
+.p-m {
+  padding-bottom: 20px;
+}

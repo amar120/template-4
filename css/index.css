@@ -1,0 +1,1513 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 132, 255);
+}
+.contain {
+  display: flex;
+  min-height: 100vh;
+}
+.contain .asid {
+  box-shadow: 1px 0px 5px 5px #eee;
+}
+.contain .asid h3 {
+  text-align: center;
+  margin: 20px 5px 50px 5px;
+  position: relative;
+  font-size: 20px;
+}
+.contain .asid h3::after {
+  position: absolute;
+  content: "";
+  width: 65px;
+  height: 2px;
+  background-color: black;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+  z-index: -1;
+}
+.contain .asid h3::before {
+  position: absolute;
+  content: "";
+  border: solid 5px white;
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+  background-color: black;
+  border-radius: 100%;
+}
+.contain .asid li {
+  margin: 15px 10px;
+  padding: 10px 0px 10px 5px;
+  border-radius: 5px;
+}
+.contain .asid li a {
+  color: black;
+}
+.contain .asid li a span {
+  padding-right: 50px;
+}
+.contain .asid .active {
+  background-color: #eee;
+}
+.contain .asid li:hover {
+  background-color: #eee;
+}
+@media (max-width: 768px) {
+  .contain .asid span {
+    display: none !important;
+  }
+  .contain .asid h3::after,
+  h3::before {
+    display: none;
+  }
+  .contain .asid h3 {
+    font-size: 15px;
+  }
+}
+/*end asid*/
+/*start content*/
+.contain .content {
+  flex: 1;
+}
+.contain .content .header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contain .content .header form {
+  position: relative;
+}
+.contain .content .header form::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f002";
+  font-weight: 900;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: gray;
+}
+.contain .content .header form input {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-left: 5px;
+  padding-left: 30px;
+  width: 160px;
+  transition: width 0.3s;
+  height: 35px;
+  outline: none;
+}
+.contain .content .header form input:focus {
+  width: 180px;
+}
+.contain .content .header .icon {
+  display: flex;
+  align-items: center;
+}
+.contain .content .header .icon i {
+  position: relative;
+}
+.contain .content .header .icon i::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 100%;
+  top: -10px;
+  right: -8px;
+}
+.contain .content .header .icon img {
+  width: 30px;
+  margin-left: 20px;
+}
+.contain .content .dash {
+  padding: 15px;
+  background-color: #f1f5f9;
+}
+.contain .content .dash h1 {
+  position: relative;
+}
+.contain .content .dash h1::after {
+  position: absolute;
+  content: "";
+  width: 70px;
+  background-color: black;
+  height: 3px;
+  left: 2px;
+  bottom: -15px;
+}
+.contain .content .dash h1::before {
+  position: absolute;
+  content: "";
+  width: 140px;
+  background-color: white;
+  height: 3px;
+  left: 2px;
+  bottom: -15px;
+}
+.contain .content .dash .container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+}
+.contain .content .dash .container .box1 .title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  border-radius: 10px 10px 0px 0px;
+  padding: 15px;
+}
+.contain .content .dash .container .box1 .title .head {
+  margin-bottom: 50px;
+}
+.contain .content .dash .container .box1 .title img {
+  width: 200px;
+}
+.contain .content .dash .container .box1 .title p {
+  color: rgb(128, 128, 128);
+  margin-top: 15px;
+}
+.contain .content .dash .container .box1 .boximg {
+  width: 65px;
+  border: solid white 5px;
+  position: relative;
+  left: 20px;
+  top: -25px;
+  border-radius: 100%;
+}
+.contain .content .dash .container .box1 .result {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.contain .content .dash .container .box1 .result::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: silver;
+  top: -30px;
+}
+.contain .content .dash .container .box1 .result::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: silver;
+  bottom: -30px;
+}
+.contain .content .dash .container .box1 .result div {
+  text-align: center;
+}
+.contain .content .dash .container .box1 .result div p {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box1 .result div span {
+  color: silver;
+}
+.contain .content .dash .container .box1 button {
+  margin: 0px 30px 20px auto;
+  display: block;
+  background-color: rgb(0, 110, 255);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+.contain .content .dash .container .box2 {
+  padding: 15px;
+}
+.contain .content .dash .container .box2 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box2 p {
+  color: rgb(150, 150, 150);
+}
+.contain .content .dash .container .box2 form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.contain .content .dash .container .box2 form input {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 10px 0 10px 10px;
+  border: none;
+}
+.contain .content .dash .container .box2 form .text {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box2 .your {
+  height: 180px;
+  position: relative;
+}
+.contain .content .dash .container .box2 .your::placeholder {
+  position: absolute;
+  top: 15px;
+}
+.contain .content .dash .container .box2 form input:focus {
+  outline: none;
+}
+.contain .content .dash .container .box2 form button {
+  margin: 35px 0px 20px auto;
+  display: block;
+  background-color: rgb(0, 110, 255);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+.contain .content .dash .container .box3 {
+  padding: 15px;
+}
+.contain .content .dash .container .box3 .titleofbox3 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box3 .titleofbox3 p {
+  color: rgb(146, 146, 146);
+}
+.contain .content .dash .container .box3 .one {
+  margin: 20px 0px;
+}
+.contain .content .dash .container .box3 .chape .icon {
+  background-color: rgb(0 117 255 / 20%);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.contain .content .dash .container .box3 .chape .chape2 .icon {
+  background-color: rgb(245 158 11 / 20%);
+}
+.contain .content .dash .container .box3 .chape .chape3 .icon {
+  background-color: rgba(34, 197, 94, 0.214);
+}
+.contain .content .dash .container .box3 .chape .chape3 .icon i {
+  color: rgb(34 197 94);
+}
+.contain .content .dash .container .box3 .chape .chape2 .icon i {
+  color: rgb(245 158 11);
+}
+.contain .content .dash .container .box3 .chape .chape1 .icon i {
+  color: rgb(0 117 255);
+}
+.contain .content .dash .container .box3 .chape .one {
+  display: flex;
+}
+.contain .content .dash .container .box3 .one .result p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: rgb(134, 134, 134);
+}
+.contain .content .dash .container .box3 .one .result {
+  width: 100%;
+}
+.contain .content .dash .container .box3 .one .result .access {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(0 117 255 / 20%);
+  margin-top: 10px;
+}
+.contain .content .dash .container .box3 .one .result .access span {
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 80%;
+  background-color: blue;
+}
+.contain .content .dash .container .box3 .chape .r2 .access span {
+  background-color: rgb(245 158 11) !important;
+}
+.contain .content .dash .container .box3 .chape .r2 .access {
+  background-color: rgb(245 158 11 / 20%);
+}
+.contain .content .dash .container .box3 .chape .r2 .access span::after {
+  background-color: rgb(245 158 11) !important;
+}
+.contain .content .dash .container .box3 .chape .r2 .access span::before {
+  border-top-color: rgb(245 158 11) !important;
+}
+.contain .content .dash .container .box3 .chape .r3 .access span {
+  background-color: rgb(34 197 94);
+}
+.contain .content .dash .container .box3 .chape .r3 .access {
+  background-color: rgba(34, 197, 94, 0.214);
+}
+.contain .content .dash .container .box3 .chape .r3 span::after {
+  background-color: rgb(34 197 94) !important;
+}
+.contain .content .dash .container .box3 .chape .r3 span::before {
+  border-top-color: rgb(34 197 94) !important;
+}
+.contain .content .dash .container .box3 .one .result .access span::after {
+  position: absolute;
+  content: "90%";
+  background-color: blue;
+  color: white;
+  padding: 3px 1px;
+  border-radius: 5px;
+  top: -45px;
+  right: 0;
+}
+.contain .content .dash .container .box3 .one .result .access span::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-width: 10px;
+  right: 7px;
+  top: -22px;
+  border-color: blue transparent transparent;
+}
+.contain .content .dash .container .box4 {
+  padding: 15px;
+}
+.contain .content .dash .container .box4 .titleofbox4 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box4 .titleofbox4 p {
+  color: rgb(119, 119, 119);
+  margin-bottom: 30px;
+}
+.contain .content .dash .container .box4 .tickets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.contain .content .dash .container .box4 .tickets div {
+  border: solid 2px silver;
+  border-radius: 5px;
+  width: calc(50% - 20px);
+  text-align: center;
+}
+.contain .content .dash .container .box4 .tickets div i {
+  display: block;
+}
+.contain .content .dash .container .box4 .tickets div * {
+  margin: 20px 0px;
+}
+.contain .content .dash .container .box4 .tickets .i1 {
+  color: orange;
+}
+.contain .content .dash .container .box4 .tickets .i2 {
+  color: blue;
+}
+.contain .content .dash .container .box4 .tickets .i3 {
+  color: green;
+}
+.contain .content .dash .container .box4 .tickets .i4 {
+  color: red;
+}
+.contain .content .dash .container .box5 {
+  padding: 15px;
+}
+.contain .content .dash .container .box5 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box5 .news .new {
+  display: flex;
+  position: relative;
+  border-bottom: solid 1px silver;
+  padding-bottom: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.none {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+}
+.contain .content .dash .container .box5 .news .new img {
+  width: 120px;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box5 .news .new .title-new {
+  width: 100%;
+}
+.contain .content .dash .container .box5 .news .new .title-new p {
+  margin-bottom: 10px;
+}
+.contain .content .dash .container .box5 .news .new .title-new span {
+  color: silver;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.contain .content .dash .container .box5 .news .new .day {
+  background-color: #eee;
+  width: 170px;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 5px;
+  height: fit-content;
+}
+.contain .content .dash .container .box6 {
+  padding: 15px;
+}
+.contain .content .dash .container .box6 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box6 .task {
+  display: flex;
+  border-bottom: solid 1px silver;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.contain .content .dash .container .box6 .task p {
+  margin-bottom: 10px;
+}
+.contain .content .dash .container .box6 .task span {
+  color: silver;
+}
+.line p,
+.line span {
+  text-decoration: line-through;
+  color: silver;
+}
+.line i {
+  color: silver;
+}
+.contain .content .dash .container .box7 {
+  padding: 15px;
+}
+.contain .content .dash .container .box7 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box7 .searchs .search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.contain .content .dash .container .box7 .searchs .search div {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-size: 14px;
+}
+.contain .content .dash .container .box8 {
+  padding: 15px;
+}
+.contain .content .dash .container .box8 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box8 .uploads .upload {
+  display: flex;
+  border-bottom: solid silver 1px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.contain .content .dash .container .box8 .uploads .upload img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+.contain .content .dash .container .box8 .uploads .upload p {
+  margin-bottom: 5px;
+}
+.contain .content .dash .container .box8 .uploads .upload span {
+  color: silver;
+}
+.contain .content .dash .container .box8 .uploads .upload .mn {
+  margin-left: auto;
+  background-color: #eee;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.contain .content .dash .container .box9 {
+  padding: 15px;
+}
+.contain .content .dash .container .box9 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box9 .progress {
+  display: flex;
+  position: relative;
+}
+.contain .content .dash .container .box9 .progress img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+}
+.contain .content .dash .container .box9 .progress ul {
+  position: relative;
+}
+.contain .content .dash .container .box9 .progress ul::before {
+  width: 2px;
+  height: 90%;
+  background-color: blue;
+  content: "";
+  position: absolute;
+  left: 5px;
+}
+.contain .content .dash .container .box9 .progress ul li {
+  margin-bottom: 30px;
+  position: relative;
+  margin-left: 30px;
+}
+.contain .content .dash .container .box9 .progress ul li::before {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  content: "";
+  background-color: blue;
+  border-radius: 100%;
+  left: -35px;
+  border: solid 2px white;
+  outline: solid blue 2px;
+}
+.block::before {
+  animation-name: amar;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.contain .content .dash .container .box10 {
+  padding: 15px;
+}
+.contain .content .dash .container .box10 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box10 .reminder {
+  margin-bottom: 20px;
+  margin-left: 50px;
+  position: relative;
+}
+.contain .content .dash .container .box10 .reminder p {
+  margin-bottom: 10px;
+}
+.contain .content .dash .container .box10 .reminder span {
+  color: silver;
+  font-size: 14px;
+}
+.contain .content .dash .container .box10 .reminder::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 50px;
+  background-color: red;
+  left: -15px;
+}
+.contain .content .dash .container .box10 .reminder::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  transform: translateY(-50%);
+  top: 50%;
+  background-color: red;
+  left: -40px;
+}
+.contain .content .dash .container .box10 .blue::before {
+  background-color: blue;
+}
+.contain .content .dash .container .box10 .blue::after {
+  background-color: blue;
+}
+.contain .content .dash .container .box10 .orange::before {
+  background-color: orange;
+}
+.contain .content .dash .container .box10 .orange::after {
+  background-color: orange;
+}
+.contain .content .dash .container .box10 .green::before {
+  background-color: green;
+}
+.contain .content .dash .container .box10 .green::after {
+  background-color: green;
+}
+.contain .content .dash .container .box11 {
+  padding: 15px;
+}
+.contain .content .dash .container .box11 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box11 .post {
+  display: flex;
+  margin-bottom: 3%;
+}
+.contain .content .dash .container .box11 .post img {
+  width: 50px;
+  margin-right: 20px;
+}
+.contain .content .dash .container .box11 .post p {
+  margin-bottom: 5px;
+}
+.contain .content .dash .container .box11 .posts span {
+  color: silver;
+}
+.contain .content .dash .container .box11 .posts img {
+  width: 50px;
+}
+.contain .content .dash .container .box11 .text {
+  border-color: silver;
+  border-width: 1px;
+  border-style: solid none solid none;
+  padding: 30px 0px 70px 0px;
+  line-height: 1.9;
+}
+.contain .content .dash .container .box11 .icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.contain .content .dash .container .box11 .icons .ic {
+  color: silver;
+}
+.contain .content .dash .container .box11 .icons .ic i {
+  margin-right: 5px;
+}
+.contain .content .dash .container .box12 {
+  padding: 15px;
+}
+.contain .content .dash .container .box12 h2 {
+  margin-bottom: 20px;
+}
+.contain .content .dash .container .box12 .media {
+  display: flex;
+  background-color: rgba(0, 187, 255, 0.349);
+  align-items: center;
+  color: rgb(0, 179, 255);
+  padding-right: 20px;
+  margin-bottom: 15px;
+}
+.contain .content .dash .container .box12 .media .fol {
+  margin-left: auto;
+  background-color: #0091ff;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.contain .content .dash .container .box12 .media i {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 162, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-right: 30px;
+}
+.contain .content .dash .container .box {
+  background-color: white;
+  border-radius: 10px;
+}
+.table {
+  padding: 15px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 100%;
+}
+.table h2 {
+  margin-bottom: 20px;
+}
+.content {
+  overflow: hidden;
+}
+.table .tabb {
+  overflow-x: auto;
+}
+.table .tabb table {
+  min-width: 1000px;
+  width: 100%;
+  border-spacing: 0;
+  border: solid 1px #eee;
+}
+.table .tabb table thead {
+  background-color: #eee;
+}
+.table .tabb table td {
+  border: solid #eee 1px;
+  padding: 15px;
+}
+.table .tabb table thead th {
+  text-align: start;
+  padding: 15px;
+}
+@keyframes amar {
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+@media (max-width: 768px) {
+  .box1 .title img {
+    display: none;
+  }
+  .boximg {
+    display: flex;
+    margin: auto;
+  }
+  .result {
+    flex-direction: column;
+  }
+  .contain .content .dash .container .box5 .news .new {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 515px) {
+  .dash .container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+  }
+}
+/*end content*/
+/*end index*/
+/*start setting*/
+.site {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+.site h2 {
+  margin-bottom: 5px;
+}
+.site .con {
+  color: silver;
+  margin-bottom: 20px;
+}
+.site .title p {
+  margin: 10px 0px;
+}
+.site .title span {
+  color: silver;
+}
+.site textarea {
+  width: 100%;
+  height: 150px;
+  margin-top: 30px;
+  resize: none;
+  padding: 15px;
+  border: solid silver 1px;
+  border-radius: 5px;
+}
+.general {
+  background-color: white;
+  padding: 15px;
+}
+.general form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: solid 1px silver;
+  border-radius: 5px;
+}
+.general form label {
+  margin-bottom: -10px;
+  display: block;
+}
+.general .change {
+  display: flex;
+}
+.general .change a {
+  color: blue;
+  display: block;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.general .m-b {
+  margin-bottom: 10px;
+}
+.security {
+  background-color: white;
+}
+.security .infos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border-bottom: solid 1px silver;
+  padding-bottom: 20px;
+}
+.security .infos p {
+  margin-bottom: 15px;
+}
+.security .infos .chang {
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  height: fit-content;
+}
+.socials {
+  background-color: white;
+}
+.socials form {
+  margin-top: 30px;
+}
+.socials form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px silver;
+  background-color: #eee;
+  padding-left: 50px;
+}
+.socials form div {
+  display: flex;
+  position: relative;
+}
+.socials form div i {
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0px;
+  color: silver;
+  border-right: solid silver 1px;
+}
+.Widgets {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+.Widgets .check-box input {
+  margin-bottom: 20px;
+  margin-right: 5px;
+  width: 17px;
+  height: 17px;
+}
+.Widgets .check-box label {
+  font-size: 17px;
+}
+.wep-control {
+  display: flex;
+  justify-content: space-between;
+}
+.wep-control .switch .switchs {
+  width: 90px;
+  height: 33px;
+  background-color: #8e8e8e;
+  border-radius: 15px;
+  position: relative;
+}
+.wep-control .switch .switchs::after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  transition: 0.3s;
+}
+.wep-control .switch input {
+  display: none;
+}
+.wep-control .switch input:checked + .switchs::after {
+  content: "\f00c";
+  left: 60px;
+  color: blue;
+}
+.wep-control .switch input:checked + .switchs {
+  background-color: rgb(0, 145, 255);
+}
+.check input {
+  display: none;
+}
+.check .switchs {
+  width: 90px;
+  height: 33px;
+  background-color: #8e8e8e;
+  border-radius: 15px;
+  position: relative;
+}
+.check .switchs::after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  transition: 0.3s;
+}
+.check input:checked + .switchs::after {
+  content: "\f00c";
+  left: 60px;
+  color: blue;
+}
+.check input:checked + .switchs {
+  background-color: rgb(0, 115, 255);
+}
+.Backup {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+.Backup .radio {
+  margin-top: 30px;
+}
+.Backup .radio div {
+  display: flex;
+}
+.Backup .radio input {
+  margin-bottom: 20px;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+.Backup .radio label {
+  font-size: 20px;
+}
+.zero {
+  border-top: solid silver 1px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.zero .zer {
+  border: solid 1px silver;
+  width: 100%;
+  margin-left: 10px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.zero .zer i {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .zero {
+    flex-wrap: wrap;
+  }
+}
+/*end setting*/
+/*start profile*/
+.osama {
+  background-color: white;
+  margin-top: 50px;
+  border-radius: 15px;
+  display: flex;
+}
+.osama-elzero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: solid silver 1px;
+  width: 250px;
+  justify-content: center;
+}
+.osama-elzero img {
+  width: 100px;
+}
+.osama-elzero .access {
+  width: 70%;
+  height: 5px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+.osama-elzero .access span {
+  width: 70%;
+  height: 100%;
+  background-color: blue;
+  display: block;
+  border-radius: 10px;
+}
+
+.check-box .che {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #eee;
+  position: relative;
+  margin-top: 15px;
+}
+.check-box input {
+  display: none;
+}
+.check-box .che::after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5c5c5c;
+  transition: 0.3s;
+}
+.check-box input:checked + .che {
+  background-color: blue;
+}
+.check-box input:checked + .che::after {
+  left: 70px !important;
+  content: "\f00c";
+}
+.skil {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.skil .skills {
+  flex: 1;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+}
+.skil .latest {
+  flex: 2;
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
+}
+.skills .my {
+  display: flex;
+  border-bottom: solid silver 1px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+.skills .my div {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.last {
+  align-items: center;
+  margin-top: 10px;
+}
+.last img {
+  width: 80px;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .osama {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .osama-elzero {
+    border-right: none;
+  }
+  .gen {
+    text-align: center;
+  }
+}
+/*end profile*/
+/*start projects*/
+.container .boxs {
+  border-radius: 15px;
+  background-color: white;
+  padding: 15px;
+}
+.imgs {
+  display: flex;
+  margin-top: 50px;
+  position: relative;
+}
+.imgs img {
+  position: relative;
+  width: 40px;
+  border-radius: 100%;
+  border: solid white 2px;
+}
+.two {
+  left: -10px;
+}
+.three {
+  left: -20px;
+}
+.four {
+  left: -30px;
+}
+.five {
+  left: -40px;
+}
+.imgs img:hover {
+  z-index: 1;
+}
+.choose {
+  display: flex;
+  margin-top: 30px;
+  border-top: solid 1px silver;
+  border-bottom: solid 1px silver;
+  padding: 15px;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 10px;
+}
+.choose div {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.next div {
+  width: 150px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+.next div span {
+  display: block;
+  width: 60%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: red;
+}
+/*end projects*/
+/*start cours*/
+.containers {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin-top: 50px;
+}
+.containers .boxx {
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+}
+.containers .boxx .img {
+  position: relative;
+}
+.containers .boxx .img .first {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+.containers .boxx .img .second {
+  width: 70px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border-radius: 100%;
+  border: solid white 2px;
+}
+.containers .boxx .textt {
+  margin: 20px;
+}
+.containers .boxx .textt h4 {
+  margin-bottom: 20px;
+}
+.containers .boxx .textt p {
+  line-height: 1.6;
+  color: gray;
+}
+.containers .boxx button {
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  z-index: 999;
+  padding: 5px 10px;
+  position: relative;
+}
+.containers .boxx .button {
+  position: relative;
+}
+.containers .boxx .button::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 1px;
+  background-color: silver;
+}
+.containers .boxx .end {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}
+/*end cours*/
+/*start friends*/
+.containers .boxxx {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  height: 400px;
+}
+.containers .boxxx .ahmed {
+  position: relative;
+  padding-top: 1px;
+}
+.containers .boxxx .ahmed .mail {
+  position: absolute;
+}
+.containers .boxxx .ahmed .mail i {
+  border-radius: 100%;
+  background-color: #eee;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+.containers .boxxx .ahmed .mail i:hover {
+  background-color: blue;
+  color: white;
+}
+.containers .boxxx .ahmed .cong {
+  position: relative;
+  text-align: center;
+  border-bottom: solid 1px silver;
+  padding-bottom: 15px;
+  margin-top: 20px;
+}
+.containers .boxxx .ahmed .cong img {
+  width: 100px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+.containers .boxxx .ahmed .cong h4 {
+  margin-bottom: 10px;
+}
+.containers .boxxx .vip {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid silver 1px;
+  padding-bottom: 10px;
+}
+.containers .boxxx .vip .VIP {
+  color: orange;
+  transform: scaleY(1.6);
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0.2;
+}
+.containers .boxxx .vip .imoje .child {
+  margin-bottom: 5px;
+}
+.containers .boxxx .vip .imoje .child i {
+  display: inline-block;
+  margin-right: 5px;
+}
+.containers .boxxx .join {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.containers .boxxx .join .pro {
+  background-color: #0091ff;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.containers .boxxx .join .rem {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+/*end friends*/
+/*start files*/
+.files {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  gap: 20px;
+  align-items: flex-start;
+}
+.files .pdf {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.files .pd {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+}
+.files .pd .impd {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.files .pd i {
+  position: absolute;
+  color: grey;
+}
+.files .pd .time {
+  margin-top: 20px;
+  border-top: solid 1px silver;
+  padding-top: 15px;
+}
+.files .pdf img {
+  width: 70px;
+  margin-bottom: 10px;
+}
+.files .static {
+  min-width: 260px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+}
+.files .static .pdf-files {
+  display: flex;
+  margin: 10px 0px;
+  font-size: 14px;
+  position: relative;
+  border: solid 1px silver;
+  padding: 10px;
+  border-radius: 5px;
+}
+.files .static .pdf-files i {
+  background-color: rgb(0 117 255 / 20%);
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+.later {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.files .static .pdf-files .PDF p {
+  margin-bottom: 5px;
+}
+.files .static a {
+  margin: 15px auto 0;
+  padding: 10px 15px;
+  transition: 0.3s;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+  width: fit-content;
+}
+.files .static a i {
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .files {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+/*end files*/
+/*start plans*/
+.plans {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+}
+.plan {
+  background-color: white;
+  padding: 15px;
+}
+.free {
+  background-color: rgb(0, 162, 0);
+  color: white;
+  text-align: center;
+  border: solid white 3px;
+  outline: solid rgb(0, 162, 0) 3px;
+  padding: 25px 0px;
+}
+.free h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.free p {
+  font-size: 35px;
+}
+.plan ul {
+  margin-top: 30px;
+}
+.plan ul li {
+  border-bottom: solid 1px silver;
+  padding-bottom: 10px;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.plan ul a {
+  padding: 4px 10px;
+  border-radius: 6px;
+  width: fit-content;
+  background-color: rgb(67, 175, 0);
+  color: white;
+  display: block;
+  margin-top: 20px;
+}
+/*end plans*/
